@@ -21,7 +21,7 @@ Plugin 'AnsiEsc.vim'
 "github vim repo
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'easymotion/vim-easymotion'
+Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
