@@ -29,7 +29,11 @@ Plugin 'majutsushi/tagbar'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Valloric/ListToggle'
 Plugin 'tikhomirov/vim-glsl'
-Plugin 'jeaye/color_coded'
+
+if has("nvim")
+else
+    Plugin 'jeaye/color_coded'
+endif
 "Plugin 'gilligan/vim-lldb'
 Plugin 'beyondmarc/glsl.vim'
 Plugin 'kien/ctrlp.vim'  
@@ -40,9 +44,18 @@ Plugin 'gabrielelana/vim-markdown'
 
 call vundle#end()
 
+
+if has("nvim")
+    " Neovim-qt Guifont command
+    command -nargs=? Guifont call rpcnotify(0, 'Gui', 'SetFont', "<args>") | let g:Guifont="<args>"
+    Guifont Monaco:h14
+else
+    set gfn=Monaco\ 14
+    set encoding=utf-8
+endif
+
 syntax on
 
-set encoding=utf-8
 set fileencoding=utf-8
 set laststatus=2
 
@@ -62,7 +75,8 @@ let mapleader=';'
 map fk :
 
 
-set gfn=Monaco\ 14
+
+
 
 let g:load_doxygen_syntax = 1
 
