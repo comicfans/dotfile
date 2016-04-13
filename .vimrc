@@ -17,6 +17,7 @@ Plugin 'Conque-GDB'
 Plugin 'DrawIt'
 Plugin 'VimIM'
 Plugin 'AnsiEsc.vim'
+Plugin 'lyuts/vim-rtags'
 
 "github vim repo
 Plugin 'gmarik/Vundle.vim'
@@ -29,12 +30,17 @@ Plugin 'majutsushi/tagbar'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Valloric/ListToggle'
 Plugin 'tikhomirov/vim-glsl'
+Plugin 'rking/ag.vim'
 
 if has("nvim")
+    Plugin 'bbchung/Clamp'
+    "    Plugin 'bbchung/clighter'
+    Plugin 'critiqjo/lldb.nvim'
 else
-    Plugin 'jeaye/color_coded'
+"    Plugin 'jeaye/color_coded'
+   Plugin 'bbchung/clighter'
+   Plugin 'gilligan/vim-lldb'
 endif
-"Plugin 'gilligan/vim-lldb'
 Plugin 'beyondmarc/glsl.vim'
 Plugin 'kien/ctrlp.vim'  
 Plugin 'tacahiroy/ctrlp-funky'
@@ -226,4 +232,3 @@ autocmd BufNewFile,BufRead *.vp,*.fp,*.gp,*.vs,*.fs,*.gs,*.tcs,*.tes,*.vert,*.fr
 
 map <C-G> :Gvdiff <CR>
     
-let g:clighter_libclang_file = '/home/wangxinyu/.local/lib/libclang.so'
